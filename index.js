@@ -18,6 +18,10 @@ Do the following:
    HINT: no function required
 */
 
+const votingAge = 18
+if (votingAge >= 18){
+  console.log(true)
+}
 
 
 /*
@@ -30,6 +34,14 @@ Do the following:
 
    HINT: no function required
 */
+
+let num1 = 5
+let num2 = 8
+
+if (num1<num2){
+  num1 = num1*num2
+  console.log(num1)
+}
 
 
 
@@ -46,6 +58,9 @@ Do the following:
    HINT: look up the Number method
 */
 
+let year = "1999"
+let stringNumber = Number.parseInt(year)
+console.log(stringNumber)
 
 
 
@@ -58,9 +73,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a*b
   }
+
+ console.log(multiply(3,4))
 
 
 
@@ -74,9 +91,12 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
+
+function dogYears(humanAge){
+    return humanAge*7
     /*add your code here*/
 }
+console.log(dogYears(10))
 
 
 
@@ -107,9 +127,47 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+
+ 
+let foodWeight = 0
+
+function hungryDog(age, dogWeight){
+  
+
+  if (age<1){
+    if (0.17<age && age<0.33){
+      foodWeight = dogWeight*0.1
+    }
+
+    if (0.33<age && age<0.58){
+      foodWeight = dogWeight*0.5
+    }
+
+    if (0.58<age && age<1){
+      foodWeight = dogWeight*0.4
+    }
+
+  }else{
+
+    if (0<dogWeight && age<5){
+      foodWeight = dogWeight*0.05
+    }
+
+    if (5<dogWeight && age<10){
+      foodWeight = dogWeight*0.04
+    }
+
+    if (10<dogWeight && age<15){
+      foodWeight = dogWeight*0.03
+    }
+
+    if (dogWeight>15){
+      foodWeight = dogWeight*0.02
+    }
   }
+  return foodWeight
+}
+
 
 
 
@@ -131,6 +189,21 @@ Use the game function below to do the following:
   
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
+
+let cpuChoice = Math.random()
+if (0>cpuChoice && cpuChoice<0.33){
+  cpuChoice = 1
+}
+if (0.33>cpuChoice && cpuChoice<0.67){
+  cpuChoice = 2
+}
+if (0.67>cpuChoice && cpuChoice<1){
+  cpuChoice = 3
+} 
+
+
+
+
 
 function game(user, computer){
     /*add your code here*/
@@ -232,14 +305,14 @@ function foo(){
     return 'bar';
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-export default{
-    foo,
-    multiply,
-    dogYears,
-    hungryDog,
-    game,
-    miles,
-    feet,
-    annoyingSong,
-    grade
-}
+// export default{
+//     foo,
+//     multiply,
+//     dogYears,
+//     hungryDog,
+//     game,
+//     miles,
+//     feet,
+//     annoyingSong,
+//     grade
+// }
