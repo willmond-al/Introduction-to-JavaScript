@@ -18,6 +18,10 @@ Do the following:
    HINT: no function required
 */
 
+const votingAge = 18
+if (votingAge >= 18){
+  console.log(true)
+}
 
 
 /*
@@ -30,6 +34,14 @@ Do the following:
 
    HINT: no function required
 */
+
+let num1 = 5
+let num2 = 8
+
+if (num1<num2){
+  num1 = num1*num2
+  console.log(num1)
+}
 
 
 
@@ -45,6 +57,9 @@ Do the following:
 
    HINT: look up the Number method
 */
+
+let year = "1999"
+
 
 
 
@@ -232,14 +247,14 @@ function foo(){
     return 'bar';
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-export default{
-    foo,
-    multiply,
-    dogYears,
-    hungryDog,
-    game,
-    miles,
-    feet,
-    annoyingSong,
-    grade
-}
+// export default{
+//     foo,
+//     multiply,
+//     dogYears,
+//     hungryDog,
+//     game,
+//     miles,
+//     feet,
+//     annoyingSong,
+//     grade
+// }
