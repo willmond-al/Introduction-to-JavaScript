@@ -282,17 +282,12 @@ Using the annoyingSong function below do the following:
 */
 
 
-for(bottles = 99; bottles>0; bottles = bottles -1){
-function annoyingSong(bottles){
-   return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`
-}
-}
-// for(let i = 0; i<10; ++i )
-// function func(){
-//   console.log("Hello")
-  
-// }
 
+function annoyingSong(a){
+  for (i=a; i>=1; i--){
+    console.log(`${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`)
+}
+}
 
 
 
@@ -356,14 +351,14 @@ function foo(){
     return 'bar';
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-export default{
-    foo,
-    multiply,
-    dogYears,
-    hungryDog,
-    game,
-    miles,
-    feet,
-    annoyingSong,
-    grade
-}
+// export default{
+//     foo,
+//     multiply,
+//     dogYears,
+//     hungryDog,
+//     game,
+//     miles,
+//     feet,
+//     annoyingSong,
+//     grade
+// }
