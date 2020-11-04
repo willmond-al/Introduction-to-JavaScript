@@ -281,9 +281,20 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+
+for(bottles = 99; bottles>0; bottles = bottles -1){
+function annoyingSong(bottles){
+   return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`
+}
+}
+// for(let i = 0; i<10; ++i )
+// function func(){
+//   console.log("Hello")
+  
+// }
+
+
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -301,8 +312,19 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grade(score){
+    if (score>=90){
+      score = "A"
+    } else if (score<90 && score>= 80) {
+      score = "B"
+    } else if (score<80 && score>=70){
+      score = "C"
+    } else if (score<70 && score>=60){
+      score = "D"
+    } else if (score<60){
+      score = "F"
+    }
+    return score
   }
   
   
@@ -334,14 +356,14 @@ function foo(){
     return 'bar';
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-// export default{
-//     foo,
-//     multiply,
-//     dogYears,
-//     hungryDog,
-//     game,
-//     miles,
-//     feet,
-//     annoyingSong,
-//     grade
-// }
+export default{
+    foo,
+    multiply,
+    dogYears,
+    hungryDog,
+    game,
+    miles,
+    feet,
+    annoyingSong,
+    grade
+}
