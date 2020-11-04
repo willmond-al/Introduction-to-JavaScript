@@ -168,6 +168,8 @@ function hungryDog(age, dogWeight){
   return foodWeight
 }
 
+console.log(hungryDog(1,15))
+
 
 
 
@@ -190,26 +192,47 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-let cpuChoice = Math.random()
-if (0>cpuChoice && cpuChoice<0.33){
-  cpuChoice = 1
+
+var user = "rock"
+var CPUChoice = Math.random();
+if (CPUChoice < 0.34) {
+	CPUChoice = "rock";
+} else if(CPUChoice <= 0.67) {
+	CPUChoice = "paper";
+} else {
+	CPUChoice = "scissors";
 }
-if (0.33>cpuChoice && cpuChoice<0.67){
-  cpuChoice = 2
+function game(user,CPUChoice){
+    if(user === CPUChoice){
+        return "it's a tie!";
+    }
+    else if(user==="rock"){
+        if(CPUChoice==="scissors"){
+            return "you win!"
+        }
+        else if(CPUChoice==="paper"){
+            return "you lose";
+        }
+    }
+    else if(user==="paper"){
+        if(CPUChoice==="scissors"){
+            return "you lose"
+        }
+        else if(CPUChoice==="rock"){
+            return "you win!";
+        }
+    }
+    else if(user==="scissors"){
+        if(CPUChoice==="paper"){
+            return "you win!"
+        }
+        else if(CPUChoice==="rock"){
+            return "you lose";
+        }
+    }
+    
 }
-if (0.67>cpuChoice && cpuChoice<1){
-  cpuChoice = 3
-} 
-
-
-
-
-
-function game(user, computer){
-    /*add your code here*/
-}
-  
-  
+console.log(game(user,CPUChoice));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -222,9 +245,12 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(distanceKm){
+    let distanceMiles = distanceKm*0.6214
+    return distanceMiles
   }
+
+  console.log(miles(20))
 
 
 
@@ -236,9 +262,12 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(distanceCm){
+    let distanceFeet = distanceCm*0.0328
+    return distanceFeet
   }
+
+  console.log(feet(50))
  
 
 
